@@ -1,4 +1,4 @@
-// Subscrbe YouTube Tamzidan Mahdiyin
+
 
 function hamburg(){
     const navbar = document.querySelector(".dropdown")
@@ -12,9 +12,10 @@ function cancel(){
 // Animasi Menulis
 
 const texts = [
-    "DEVELOPER",
-    "YOUTUBER",
-    "DESIGNER"
+    "SOFTWARE DEVELOPER",
+    "WEB DEVELOPER",
+    "PROJECT MANAGER",
+    
 ]
 
 let speed = 100;
@@ -49,4 +50,3 @@ function eraseText() {
 
 window.onload = typeWriter;
 
-// Subscrbe YouTube Tamzidan Mahdiyin
