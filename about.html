@@ -5,21 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Link ke Font Awesome untuk ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Link ke library animasi AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- CSS internal untuk styling halaman -->
     <style>
-        /* 
-          Import Google Font Poppins
-          Font weight yang diimport: 100, 200, 300, 400, 500, 600 
-        */
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
-        /* Reset CSS dan pengaturan default */
         * {
             padding: 0;
             margin: 0;
@@ -27,12 +19,6 @@
             box-sizing: border-box;
         }
 
-        /* 
-          Styling untuk body
-          - Menggunakan background image
-          - Cover seluruh viewport
-          - Mencegah horizontal scroll
-        */
         body {
             width: 100%;
             min-height: 100vh;
@@ -42,23 +28,16 @@
             position: relative;
         }
 
-        /* 
-          Navbar styling
-          - Fixed height 10vh
-          - Posisi relative untuk positioning yang tepat
-          - z-index tinggi agar selalu di atas konten lain
-        */
         nav {
             width: 100%;
             height: 10vh;
             position: sticky;
             position: relative;
-            /* Ubah dari sticky ke relative */
+        
             z-index: 1000;
-            /* Tambahkan z-index tinggi untuk nav */
+        
         }
 
-        /* Container untuk konten navbar */
         .nav-container {
             width: 100%;
             height: 100%;
@@ -67,11 +46,6 @@
             align-items: center;
         }
 
-        /* 
-          Logo styling
-          - Warna putih dengan ukuran 2rem
-          - Text shadow untuk efek glow pada span 
-        */
         .logo {
             color: white;
             font-size: 2rem;
@@ -83,11 +57,6 @@
             text-shadow: 0 0 10px rgb(58, 211, 3);
         }
 
-        /* 
-          Hamburger dan Cancel button styling
-          - Hanya muncul di mobile view
-          - Posisi absolute di kanan atas
-        */
         .hamburg,
         .cancel {
             cursor: pointer;
@@ -99,19 +68,10 @@
             font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
         }
 
-        /* 
-          Navigation links container
-          - Flex layout untuk alignment horizontal
-        */
         .nav-container .links {
             display: flex;
         }
 
-        /* 
-          Individual navigation links
-          - Spacing dan styling untuk tiap link
-          - Hover effect dengan border bottom
-        */
         .nav-container .links a {
             font-size: 1.2rem;
             color: white;
@@ -126,17 +86,10 @@
             border-bottom: 2px solid rgb(58, 211, 3);
         }
 
-        /* Styling untuk link aktif */
         .nav-container .links .active {
             color: rgb(58, 211, 3);
             border-bottom: 2px solid rgb(58, 211, 3);
         }
-
-        /* 
-          Dropdown menu untuk mobile view
-          - Fixed positioning dengan transform untuk animasi
-          - Backdrop filter untuk efek blur
-        */
         .dropdown {
             z-index: 1000;
             position: fixed;
@@ -165,7 +118,6 @@
             background-color: rgb(58, 211, 3);
         }
 
-        /* About Section Styles */
         .about-container {
             width: 100%;
             min-height: 90vh;
@@ -185,7 +137,6 @@
             border-radius: 20px;
             padding: 3rem;
             color: white;
-            /* box-shadow: 0 0 30px rgba(58, 211, 3, 0.3); */
         }
 
         .about-header {
@@ -549,7 +500,6 @@
                 AOS.refresh();
             }
 
-            // Fungsi untuk menampilkan daftar Experience
             function showExperience() {
                 const aboutContent = document.getElementById('aboutContent');
                 aboutContent.innerHTML = `
@@ -566,7 +516,6 @@
                 AOS.refresh();
             }
 
-            // Fungsi untuk menampilkan daftar Clients
             function showClients() {
                 const aboutContent = document.getElementById('aboutContent');
                 aboutContent.innerHTML = `
@@ -583,7 +532,6 @@
                 AOS.refresh();
             }
 
-            // Fungsi untuk menampilkan daftar Awards
             function showAwards() {
                 const aboutContent = document.getElementById('aboutContent');
                 aboutContent.innerHTML = `
@@ -599,8 +547,6 @@
             `;
                 AOS.refresh();
             }
-
-            // Fungsi pembantu untuk menghasilkan kartu project
             function generateProjectCards() {
                 const projects = [
                     {
@@ -621,7 +567,6 @@
                         description: "Mobile-first task management application",
                         technologies: ["Python", "Flask"]
                     }
-                    // Add more projects as needed
                 ];
 
                 return projects.map(project => `
@@ -642,7 +587,6 @@
             `).join('');
             }
 
-            // Fungsi pembantu untuk menghasilkan kartu experience
             function generateExperienceCards() {
                 const experiences = [
                     {
@@ -657,7 +601,7 @@
                         period: "2023 - Present",
                         description: "Developed responsive websites and web applications"
                     }
-                    // Add more experiences as needed
+        
                 ];
 
                 return experiences.map(exp => `
@@ -672,7 +616,7 @@
             `).join('');
             }
 
-            // Fungsi pembantu untuk menghasilkan kartu client
+
             function generateClientCards() {
                 const clients = [
                     {
@@ -696,7 +640,7 @@
                         image: "img/zoro.jpg",
                         testimonial: "Delivered our app ahead of schedule with excellent quality"
                     }
-                    // Add more clients as needed
+    
                 ];
 
                 return clients.map(client => `
@@ -714,7 +658,6 @@
             `).join('');
             }
 
-            // Fungsi pembantu untuk menghasilkan kartu award
             function generateAwardCards() {
                 const awards = [
                     {
